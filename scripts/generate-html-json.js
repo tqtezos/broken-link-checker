@@ -1,7 +1,7 @@
 "use strict";
 const {normalize:normalizePath} = require("path");
 const {promises: {writeFile}} = require("fs");
-
+require("polyfill-object.fromentries");
 
 
 // XHTML self-closing tags exist to check that they're removed via the HTML parser

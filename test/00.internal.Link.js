@@ -5,7 +5,7 @@ import isString from "is-string";
 import Link, {HTML_BASE_HREF, IS_INTERNAL, IS_SAME_PAGE, ORIGINAL_URL, REBASED_BASE_URL, REBASED_URL, REDIRECTED_URL, RESOLVED_BASE_URL, RESOLVED_URL} from "../lib/internal/Link";
 import {simplifyLink} from "./helpers";
 import URL_TESTS from "./fixtures-json/Link.json";
-
+import "polyfill-object.fromentries";
 
 
 const INTERPOLATED_URL_TESTS = (() =>
