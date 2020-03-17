@@ -12,12 +12,10 @@ const INTERPOLATED_URL_TESTS = (() =>
 {
 	const interpolatableKeys = ["rebasedBaseURL", "rebasedLinkURL", "resolvedBaseURL", "resolvedLinkURL"];
 
-	return Object.fromEntries
-	(
+	return Object.fromEntries(
 		Object.entries(URL_TESTS).map(([title, fixture]) =>
 		{
-			fixture = Object.fromEntries
-			(
+			fixture = Object.fromEntries(
 				Object.entries(fixture).map(([key, value]) =>
 				{
 					if (interpolatableKeys.includes(key))

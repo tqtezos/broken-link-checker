@@ -69,8 +69,7 @@ const generate = () => saveFile( normalizePath(`${__dirname}/../test/fixtures-js
 
 
 
-const generateData = () => Object.fromEntries
-(
+const generateData = () => Object.fromEntries(
 	Object.entries(htmls).map(([key, value]) =>
 	[
 		key,

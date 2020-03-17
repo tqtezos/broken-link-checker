@@ -79,7 +79,7 @@
     "void-elements": "^3.1.0"
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 10"
   },
   "scripts": {
     "build": "babel lib/ --config-file=./scripts/babel.config.js --out-dir=lib-cjs/ --source-maps",
