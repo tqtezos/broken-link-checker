@@ -49,7 +49,7 @@ describe("INTERNAL -- requestHTTP", () =>
 			headers: { "content-type": "text/html" },
 			redirects: [],
 			status: 200,
-			statusText: null,
+			statusText: "OK",
 			url: new URL("http://blc:80/simple/index.html")
 		});
 
@@ -68,7 +68,7 @@ describe("INTERNAL -- requestHTTP", () =>
 			headers: { "content-type": "text/html" },
 			redirects: [],
 			status: 200,
-			statusText: null,
+			statusText: "OK",
 			url: new URL("http://blc:80/simple/index.html")
 		});
 
@@ -86,7 +86,7 @@ describe("INTERNAL -- requestHTTP", () =>
 		{
 			headers: { "content-type": "text/html" },
 			status: 200,
-			statusText: null,
+			statusText: "OK",
 			url: new URL("http://blc/redirect/redirected.html"),
 			redirects:
 			[
@@ -97,7 +97,7 @@ describe("INTERNAL -- requestHTTP", () =>
 						location: "/redirect/redirect2.html"
 					},
 					status: 302,
-					statusText: null,
+					statusText: "Found",
 					url: new URL("http://blc/redirect/redirect.html")
 				},
 				{
@@ -107,7 +107,7 @@ describe("INTERNAL -- requestHTTP", () =>
 						location: "/redirect/redirected.html"
 					},
 					status: 301,
-					statusText: null,
+					statusText: "Moved Permanently",
 					url: new URL("http://blc/redirect/redirect2.html")
 				}
 			]
