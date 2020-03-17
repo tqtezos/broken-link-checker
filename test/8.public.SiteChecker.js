@@ -640,33 +640,6 @@ describe("PUBLIC -- SiteChecker", function()
 		
 		
 		
-		it("does not check a non-first page that redirects to another site", function(done)
-		{
-			var linkCount = 0;
-			var pageCount = 0;
-			
-			new SiteChecker( helpers.options(),
-			{
-				link: function(result, customData)
-				{
-					expect(result.broken).to.be.false;
-					linkCount++;
-				},
-				page: function()
-				{
-					pageCount++;
-				},
-				end: function()
-				{
-					expect(linkCount).to.equal(1);
-					expect(pageCount).to.equal(1);
-					done();
-				}
-			}).enqueue( conn.absoluteUrls[0]+"/external-redirect/index.html" );
-		});
-		
-		
-		
 		it("checks a first page that redirects to another site", function(done)
 		{
 			var pageCount = 0;

@@ -1170,7 +1170,7 @@ describe("INTERNAL -- checkUrl", function()
 	
 	
 	
-	describe("shall not be broken with a REDIRECTED url", function()
+	describe("shall have a warning with a REDIRECTED url", function()
 	{
 		it("containing no query or hash", function()
 		{
@@ -1196,7 +1196,9 @@ describe("INTERNAL -- checkUrl", function()
 						resolved: conn.absoluteUrls[0]+"/"
 					},
 					http: { response: { redirects:[] } },
-					broken: false,
+					broken: null,
+					warning: true,
+					warningReason: `REDIRECTED to ${conn.absoluteUrls[0]}/redirect/redirected.html`,
 					brokenReason: null,
 					excluded: null,
 					excludedReason: null,
@@ -1270,8 +1272,10 @@ describe("INTERNAL -- checkUrl", function()
 						resolved: conn.absoluteUrls[0]+"/"
 					},
 					http: { response: { redirects:[] } },
-					broken: false,
+					broken: null,
 					brokenReason: null,
+					warning: true,
+					warningReason: `REDIRECTED to ${conn.absoluteUrls[0]}/redirect/redirected.html`,
 					excluded: null,
 					excludedReason: null,
 					internal: true,
